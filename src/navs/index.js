@@ -1293,6 +1293,10 @@ export const handbookSidebar = [
                 url: '/handbook/growth/revops/lifecycle-analysis',
             },
             {
+                name: 'Signup enrichment pipeline',
+                url: '/handbook/growth/revops/enrichment-pipeline',
+            },
+            {
                 name: 'SalesOps',
                 url: '',
                 children: [
