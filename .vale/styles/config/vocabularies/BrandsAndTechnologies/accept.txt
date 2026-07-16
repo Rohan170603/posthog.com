@@ -72,6 +72,7 @@ Crossplane
 Crowdin
 [Cc]ursor
 Customer\.io
+Customerly
 Databricks
 Datadog
 DBeaver
