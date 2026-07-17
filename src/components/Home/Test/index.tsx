@@ -34,7 +34,11 @@ function LazyHeroCarousel({ className }: { className?: string }) {
     useEffect(() => {
         Promise.all([import('components/Home/HeroCarousel'), import('components/Home/HeroCarousel/tabs')]).then(
             ([{ default: HeroCarousel }, { buildTabs }]) => {
-                setContent(() => (props: { className?: string }) => <HeroCarousel tabs={buildTabs} {...props} />)
+                function HeroCarouselContent(props: { className?: string }) {
+                    return <HeroCarousel tabs={buildTabs} {...props} />
+                }
+
+                setContent(() => HeroCarouselContent)
             }
         )
     }, [])
