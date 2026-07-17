@@ -12,6 +12,7 @@ import type { TabbedCarouselTab } from 'components/TabbedCarousel'
 import Link from 'components/Link'
 import WizardCommand from 'components/WizardCommand'
 import { SignalsCallout } from 'components/Code/SignalsCallout'
+import { getWindowSurfaceBg } from '../../constants/frostedSurfaces'
 import { useAppSettings } from '../../context/App'
 import {
     IconArrowRight,
@@ -925,9 +926,7 @@ export default function SelfDrivingPage({
     const { siteSettings } = useAppSettings()
 
     const selfDrivingPRs = data?.allSelfDrivingPullRequest?.nodes ?? []
-    const humanRoleCardBackground = siteSettings.heaterMode
-        ? 'bg-primary/75 backdrop-blur-3xl will-change-[transform,backdrop-filter] transform-gpu'
-        : 'bg-primary bg-mesh-green-light dark:bg-mesh-green-dark'
+    const humanRoleCardBackground = getWindowSurfaceBg(siteSettings.heaterMode)
     return (
         <>
             <SEO
