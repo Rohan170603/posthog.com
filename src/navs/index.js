@@ -1549,6 +1549,10 @@ export const handbookSidebar = [
                 url: '',
                 children: [
                     {
+                        name: 'Customer journey and coverage model',
+                        url: '/handbook/growth/sales/customer-journey',
+                    },
+                    {
                         name: 'Allocating accounts',
                         url: '/handbook/growth/sales/account-allocation',
                     },
